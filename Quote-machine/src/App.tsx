@@ -3,16 +3,16 @@ import './App.css';
 import quotes from './assets/quotes.json';
 import { FaTwitter, FaQuoteLeft, FaQuoteRight } from 'react-icons/fa';
 
-interface Quote {
+interface Quotes {
   quote: string;
   author: string;
 }
 
-const getRandomQuote = (): Quote => {
+const getRandomQuotes = (): Quotes => {
   return quotes[Math.floor(Math.random() * quotes.length)];
 }
 
-const getRandomColor = (): string => {
+const getRandomColors = (): string => {
   const red = Math.floor(Math.random() * 128);
   const green = Math.floor(Math.random() * 128);
   const blue = Math.floor(Math.random() * 128);
@@ -23,12 +23,12 @@ const getRandomColor = (): string => {
 const transition = "all 1s";
 
 function App() {
-  const [quote, setQuote] = useState<Quote>(getRandomQuote())
-  const [randomColor, setRandomColor] = useState<string>(getRandomColor());
+  const [quote, setQuote] = useState<Quotes>(getRandomQuotes())
+  const [randomColor, setRandomColor] = useState<string>(getRandomColors());
 
   const changeQoute = () => {
-    setQuote(getRandomQuote());
-    setRandomColor(getRandomColor());
+    setQuote(getRandomQuotes());
+    setRandomColor(getRandomColors());
   }
   
   return (
