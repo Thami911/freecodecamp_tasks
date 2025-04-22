@@ -1,0 +1,131 @@
+:root {
+  --white: #fff;
+  --dark-gray: #6c6c6c;
+  --light-gray: #f0f0f0;
+  --black: #000;
+  --yellow: #f9a825;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#calculator {
+  display: grid;
+  grid-template-areas: 
+    "display display display display"
+    "buttonClear buttonNegative buttonPercent buttonDivide"
+    "button7 button8 button9 buttonMultiply"
+    "button4 button5 button6 buttonMinus"
+    "button1 button2 button3 buttonPlus"
+    "button0 button0 buttonDot buttonEqual";
+  grid-template-columns: 100px 100px 100px 100px;
+  gap: 25px;
+  padding: 50px;
+  padding-top: 30px;
+  margin-top: 20px;
+  border-radius: 20px;
+  background-color: var(--black);
+}
+
+.light-gray {
+  background-color: var(--light-gray);
+}
+.dark-gray {
+  background-color: var(--dark-gray);
+  color: white;
+}
+.yellow {
+  background-color: var(--yellow);
+  color: white;
+}
+
+button {
+  height: 100px;
+  width: 100%;
+  font-size: 25px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.1s ease-in-out;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+#answer {
+  height: 50px;
+  font-size: 50px;
+}
+
+#expression {
+  color: var(--dark-gray);
+  font-size: 25px;
+  height: 25px;
+}
+
+#display {
+  grid-area: display;
+}
+#divide {
+  grid-area: buttonDivide;
+}
+#clear {
+  grid-area: buttonClear;
+}
+#negative {
+  grid-area: buttonNegative;
+}
+#percentage {
+  grid-area: buttonPercent;
+}
+#seven {
+  grid-area: button7;
+}
+#eight {
+  grid-area: button8;
+}
+#nine {
+  grid-area: button9;
+}
+#multiply {
+  grid-area: buttonMultiply;
+}
+#four {
+  grid-area: button4;
+}
+#five {
+  grid-area: button5;
+}
+#six {
+  grid-area: button6;
+}
+#subtract {
+  grid-area: buttonMinus;
+}
+#one {
+  grid-area: button1;
+}
+#two {
+  grid-area: button2;
+}
+#three {
+  grid-area: button3;
+}
+#add {
+  grid-area: buttonPlus;
+}
+#zero {
+  grid-area: button0;
+}
+#decimal {
+  grid-area: buttonDot;
+}
+#equals {
+  grid-area: buttonEqual;
+}
